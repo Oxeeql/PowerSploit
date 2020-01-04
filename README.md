@@ -1,3 +1,8 @@
+# About this Fork
+
+included a working invoke-mimikatz version, and renamed commands from powerview to avoid conflict with the commands of the Active Directory Module
+
+
 ### PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts:
 
 ## CodeExecution
@@ -36,7 +41,7 @@ Compresses, Base-64 encodes, and outputs generated code to load a managed dll in
 
 Encrypts text files/scripts.
 
-#### `Remove-Comments`
+#### `Remove-Comment`
 
 Strips comments and extra whitespace from a script. 
 
@@ -132,7 +137,7 @@ Displays Windows vault credential objects including cleartext web credentials.
 
 Generates a full-memory minidump of a process.
 
-#### 'Get-MicrophoneAudio'
+#### `Get-MicrophoneAudio`
 
 Records audio from system microphone and saves to disk
 
