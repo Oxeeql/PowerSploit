@@ -25,7 +25,7 @@
         $AllClasses = Do
         {
             $CurrentClass = $NextClass
-            $NextClass = Get-ADObject -SearchBase "$((Get-ADRootDSE).SchemaNamingContext)" -Filter {lDAPDisplayName -eq $NextClass} -properties subClassOf |Select-Object -ExpandProperty subClassOf
+            $NextClass = Get-ADObjectPowerView -SearchBase "$((Get-ADRootDSE).SchemaNamingContext)" -Filter {lDAPDisplayName -eq $NextClass} -properties subClassOf |Select-Object -ExpandProperty subClassOf
             $CurrentClass
         }
         While($CurrentClass -ne $NextClass)
@@ -34,7 +34,7 @@
         Write-verbose "Attempting to find all attributes for the AD Object: $($ADObj.Name)"
         $AllAttributes = ForEach ($Class in $AllClasses)
         {
-            $ClassInfo = Get-ADObject -SearchBase "$((Get-ADRootDSE).SchemaNamingContext)" -Filter {lDAPDisplayName -eq $Class} -properties $attributAttributes 
+            $ClassInfo = Get-ADObjectPowerView -SearchBase "$((Get-ADRootDSE).SchemaNamingContext)" -Filter {lDAPDisplayName -eq $Class} -properties $attributAttributes 
             ForEach ($attribute in $attributAttributes)
             {
                 $ListOfAttributesFromAD += $ClassInfo.$attribute

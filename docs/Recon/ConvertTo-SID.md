@@ -17,7 +17,7 @@ ConvertTo-SID [-ObjectName] <String[]> [[-Domain] <String>] [[-Server] <String>]
 Converts a "DOMAIN\username" syntax to a security identifier (SID)
 using System.Security.Principal.NTAccount's translate function.
 If alternate
-credentials are supplied, then Get-ADObject is used to try to map the name
+credentials are supplied, then Get-ADObjectPowerView is used to try to map the name
 to a security identifier.
 
 ## EXAMPLES

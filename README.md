@@ -1,3 +1,8 @@
+# About this Fork
+
+included a working invoke-mimikatz version, and renamed commands from powerview to avoid conflict with the commands of the Active Directory Module
+
+
 ### PowerSploit is a collection of Microsoft PowerShell modules that can be used to aid penetration testers during all phases of an assessment. PowerSploit is comprised of the following modules and scripts:
 
 ## CodeExecution

@@ -1456,7 +1456,7 @@ Required Dependencies: Convert-ADName, Get-DomainObject, Get-Domain
 
 Converts a "DOMAIN\username" syntax to a security identifier (SID)
 using System.Security.Principal.NTAccount's translate function. If alternate
-credentials are supplied, then Get-ADObject is used to try to map the name
+credentials are supplied, then Get-ADObjectPowerView is used to try to map the name
 to a security identifier.
 
 .PARAMETER ObjectName
@@ -20873,8 +20873,8 @@ Set-Alias Get-NetForestCatalog Get-ForestGlobalCatalog
 Set-Alias Get-NetUser Get-DomainUser
 Set-Alias Get-UserEvent Get-DomainUserEvent
 Set-Alias Get-NetComputer Get-DomainComputer
-Set-Alias Get-ADObject Get-DomainObject
-Set-Alias Set-ADObject Set-DomainObject
+Set-Alias Get-ADObjectPowerView Get-DomainObject
+Set-Alias Set-ADObjectPowerView Set-DomainObject
 Set-Alias Get-ObjectAcl Get-DomainObjectAcl
 Set-Alias Add-ObjectAcl Add-DomainObjectAcl
 Set-Alias Invoke-ACLScanner Find-InterestingDomainAcl
